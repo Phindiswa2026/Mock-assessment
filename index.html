@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warranty Claim Tracker</title>
+    <!-- Link the external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Warranty Claim Tracker</h1>
+
+        <!-- Warranty Claim Form -->
+        <form id="claimForm">
+            <div class="form-group">
+                <label for="claimantName">Claimant Name:</label>
+                <input type="text" id="claimantName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="claimantEmail">Email:</label>
+                <input type="email" id="claimantEmail" required>
+            </div>
+
+            <div class="form-group">
+                <label for="productCode">Product Code:</label>
+                <input type="text" id="productCode" required>
+            </div>
+
+            <div class="form-group">
+                <label for="claimCategory">Claim Category:</label>
+                <select id="claimCategory" required>
+                    <option value="">--Select Category--</option>
+                    <option value="Hardware Failure">Hardware Failure</option>
+                    <option value="Manufacturing Defect">Manufacturing Defect</option>
+                    <option value="Accidental Damage">Accidental Damage</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="claimDescription">Claim Description:</label>
+                <textarea id="claimDescription" rows="4" required></textarea>
+            </div>
+
+            <button type="submit">Submit Claim</button>
+        </form>
+
+        <!-- Area for status / feedback messages -->
+        <div id="statusMessage" class="status-message"></div>
+
+        <!-- Area where claim records will be displayed -->
+        <section class="records-section">
+            <h2>Claim Records</h2>
+            <table id="claimsTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Product Code</th>
+                        <th>Category</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Claim records will be dynamically populated here -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <!-- Link the external JavaScript file -->
+    <script src="script.js"></script>
+    <!-- Filter Control Section -->
+<div class="filter-section" style="margin: 20px 0;">
+    <label for="categoryFilter">Filter by Category: </label>
+    <select id="categoryFilter">
+        <option value="All">All Categories</option>
+        <option value="Hardware Failure">Hardware Failure</option>
+        <option value="Manufacturing Defect">Manufacturing Defect</option>
+        <option value="Accidental Damage">Accidental Damage</option>
+    </select>
+</div>
+<thead>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Product Code</th>
+        <th>Category</th>
+        <th>Status</th>
+        <th>Actions</th>
+    </tr>
+</thead>
+
+</body>
+</html>
+
+
+
+
+
+
+        
+           
